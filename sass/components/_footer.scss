@@ -1,5 +1,4 @@
 .main-footer {
-
   .upperRow {
     /* column-gap: 250px; */
     justify-content: space-between;
@@ -21,8 +20,7 @@
     height: 200px;
 
     @include media-breakpoint-up(custom1) {
-      margin-top: -50px
+      margin-top: -50px;
     }
-
   }
 }
