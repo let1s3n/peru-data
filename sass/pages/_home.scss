@@ -1,0 +1,702 @@
+//General home styles
+.titulo {
+  @include media-breakpoint-up(sm) {
+    display: none;
+  }
+
+  display: block;
+  color: map-get($theme-colors, "secondary");
+}
+
+.single-arrow {
+  width: 1rem;
+  height: 1rem;
+}
+
+//Specific styles per page
+.cover {
+  @include media-breakpoint-up(md) {
+    background-image: url("/images/fondo-tablet.png");
+  }
+
+  @include media-breakpoint-up(xl) {
+    background-image: url("/images/fondo-desktop.png");
+  }
+
+  background-image: url("/images/fondo.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+
+  &__content {
+    @include media-breakpoint-up(md) {
+      padding-top: 223px;
+      padding-bottom: 205px;
+      height: auto;
+    }
+
+    @include media-breakpoint-up(xl) {
+      padding-top: 138px;
+      padding-bottom: 215px;
+    }
+
+    padding-top: 152px;
+    height: 100vh;
+  }
+}
+
+.tools {
+  overflow-x: hidden;
+  min-height: 100vh;
+  position: relative;
+
+  .nav-tabs {
+    .nav-link {
+      border: none;
+    }
+  }
+
+  .image-decore {
+    @include media-breakpoint-up(md) {
+      margin-bottom: 120px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      margin-bottom: 133px;
+    }
+
+    margin-bottom: 78px;
+  }
+
+  .list-services {
+    li {
+      @include media-breakpoint-up(md) {
+        margin-bottom: 36px;
+      }
+
+      margin-bottom: 45px;
+      font-weight: 600;
+
+      &:last-child {
+        margin-bottom: 0px;
+      }
+    }
+
+    margin-bottom: 40px;
+  }
+
+  .carousel-indicators {
+    margin: 2rem auto 0;
+    bottom: 100%;
+    top: unset;
+    width: 100%;
+    max-width: 100%;
+
+    @include media-breakpoint-up(md) {
+      bottom: 120%;
+    }
+
+    @include media-breakpoint-up(xl) {
+      max-width: 110%;
+      width: 650px;
+    }
+
+    [data-bs-target] {
+      background-color: unset;
+      color: $desactivado;
+      text-indent: 0px;
+      opacity: unset;
+      margin: 0;
+    }
+
+    .active {
+      color: $mu-azul;
+      font-weight: 800;
+    }
+  }
+
+  .container-fluid > .carousel > .carousel-indicators,
+  .container-md > .carousel > .carousel-indicators,
+  .custom-container > .carousel > .carousel-indicators {
+    justify-content: space-between;
+    margin-left: 0px;
+    margin-right: 0px;
+    column-gap: 24px;
+
+    @include media-breakpoint-up(xl) {
+      column-gap: 56px;
+    }
+
+    left: 50%;
+    transform: translateX(-50%);
+
+    button {
+      @include media-breakpoint-up(md) {
+        font-size: 1rem;
+      }
+
+      @include media-breakpoint-up(xxl) {
+        font-size: 1.125rem;
+      }
+
+      height: auto;
+      font-size: 0.75rem;
+      border-top: none;
+      width: auto !important;
+    }
+  }
+
+  .carousel.slide {
+    min-height: 100%;
+  }
+
+  .carousel-item {
+    opacity: 0;
+    transition: all 0.5s ease-in-out !important;
+
+    .carousel-indicators {
+      top: 100%;
+      column-gap: 6.38px;
+      bottom: unset;
+      height: 12px;
+
+      [data-bs-target] {
+        background-color: $mu-gris;
+      }
+
+      .active {
+        background-color: unset;
+        background-image: $degrade-subsecciones;
+      }
+
+      button {
+        flex: unset;
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+      }
+    }
+
+    & > .row {
+      row-gap: 1rem;
+
+      @include media-breakpoint-up(md) {
+        row-gap: 2.5rem;
+      }
+    }
+
+    .col > img,
+    .col-auto > img {
+      border-radius: 22px;
+      transition: all 0.4s ease-in-out;
+      width: 64px;
+      height: 64px;
+
+      @include media-breakpoint-up(md) {
+        width: 70px;
+        height: 70px;
+      }
+
+      @include media-breakpoint-up(xxl) {
+        width: 80px;
+        height: 80px;
+      }
+
+      &:hover {
+        transform: scale(1.1);
+        box-shadow: 0px 0px 77px 8px rgba(26, 54, 168, 0.28);
+        filter: drop-shadow(0px 4px 7px rgba(98, 98, 98, 0.17));
+      }
+    }
+
+    .customRow {
+      column-gap: 24px;
+      min-height: 144px;
+      justify-content: center;
+
+      @include media-breakpoint-up(md) {
+        column-gap: 40px;
+      }
+
+      @include media-breakpoint-up(xxl) {
+        column-gap: 36px;
+        min-height: 200px;
+      }
+    }
+  }
+
+  .active.carousel-item {
+    opacity: 1;
+  }
+
+  .carousel-inner {
+    overflow: unset;
+    min-height: 100%;
+  }
+
+  .illustration-container {
+    @include media-breakpoint-up(xxl) {
+      width: 481px;
+      height: 487px;
+    }
+
+    .tecnologias-luz {
+      display: none;
+      opacity: 0;
+      transition: all 0.4s ease-in-out;
+      @include media-breakpoint-up(xl) {
+        display: block;
+        bottom: 26px;
+        left: -108px;
+      }
+
+      @include media-breakpoint-up(xxl) {
+        bottom: 70px;
+        left: -43px;
+      }
+    }
+
+    &:hover {
+      @include media-breakpoint-up(xl) {
+        .tecnologias-luz {
+          opacity: 1;
+          transition: all 0.4s ease-in-out;
+        }
+      }
+    }
+  }
+
+  .custom-container {
+    margin: 0 auto;
+    height: 230px;
+
+    @include media-breakpoint-up(md) {
+      height: 200px;
+      width: 620px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      width: 80%;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      width: 800px;
+    }
+
+    width: 240px;
+  }
+
+  .btnProyectos {
+    min-width: 235px;
+    height: 41px;
+
+    @include media-breakpoint-up(md) {
+      min-width: 289px;
+      height: 49px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      min-width: 285px;
+      height: 56px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      min-width: 314px;
+    }
+  }
+}
+
+.certifications {
+  min-height: 100vh;
+
+  background-image: url("https://d1l9597hydyb9x.cloudfront.net/cms_masuno/images/certificationsBackground_mobile.png"),
+    linear-gradient(270deg, #212d3b 0%, #0b0e12 100%);
+
+  background-position: left top;
+  background-size: 100%;
+  background-repeat: no-repeat;
+
+  @include media-breakpoint-up(md) {
+    background-image: url("https://d1l9597hydyb9x.cloudfront.net/cms_masuno/images/certificationsBackground_tablet.png"),
+      linear-gradient(270deg, #212d3b 0%, #0b0e12 100%);
+  }
+
+  @include media-breakpoint-up(xl) {
+    background-image: url("https://d1l9597hydyb9x.cloudfront.net/cms_masuno/images/certificationsBackground_desktop.png"),
+      linear-gradient(270deg, #212d3b 0%, #0b0e12 100%);
+  }
+
+  &__imagesContainer {
+    row-gap: 1rem;
+    margin-bottom: 108px;
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: 200px;
+
+      column-gap: 30px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      margin-bottom: 118px;
+      column-gap: 40px;
+    }
+  }
+
+  &__images {
+    width: fit-content;
+  }
+}
+
+.projects {
+  min-height: 100vh;
+
+  .list-projects-container {
+    @include media-breakpoint-up(md) {
+      padding: 0px 60px 0px;
+    }
+  }
+
+  .list-projects {
+    justify-content: center;
+
+    @include media-breakpoint-up(xl) {
+      justify-content: space-between;
+    }
+
+    row-gap: 40px;
+
+    .card-text {
+      button {
+        background-color: #f2f2fd;
+      }
+    }
+  }
+
+  .card-img-overlay {
+    opacity: 0;
+    display: flex;
+    border-radius: 1.5rem;
+    transition: all 0.5s ease-in-out;
+
+    padding: 50px 0px 0px 32px;
+
+    &:hover {
+      opacity: 1;
+
+      &.bgcolor1 {
+        background-color: rgba(0, 76, 151, 0.76);
+      }
+
+      &.bgcolor2 {
+        background-color: rgba(0, 166, 210, 0.76);
+      }
+
+      &.bgcolor3 {
+        background-color: rgba(148, 200, 61, 0.76);
+      }
+    }
+  }
+
+  .card-img-top {
+    border-radius: 25px;
+    width: 312px;
+    height: 168px;
+    object-fit: cover;
+
+    @include media-breakpoint-up(sm) {
+      height: 174px;
+      flex: 1.5;
+    }
+
+    @include media-breakpoint-up(md) {
+      width: 380px;
+      height: 207px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      flex: 1;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      width: 400px;
+    }
+  }
+
+  .card-body {
+    @include media-breakpoint-up(sm) {
+      flex: 1;
+    }
+
+    .card-text {
+      .col {
+        @include media-breakpoint-up(md) {
+          flex: 0;
+          width: auto;
+        }
+      }
+    }
+  }
+
+  .verMasContainer {
+    margin-top: 58px;
+
+    @include media-breakpoint-up(md) {
+      margin-top: 120px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      margin-top: 89px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      margin-top: 80px;
+    }
+
+    .verMasBtn {
+      min-width: 176px;
+      height: 39px;
+      border-radius: 40px;
+
+      @include media-breakpoint-up(md) {
+        min-width: 212px;
+        height: 56px;
+      }
+
+      @include media-breakpoint-up(xxl) {
+        min-width: 233px;
+      }
+    }
+  }
+}
+
+.products {
+  background-color: #201e20;
+  overflow: hidden;
+  min-height: 155vh;
+
+  @include media-breakpoint-up(xl) {
+    min-height: 100vh;
+  }
+
+  .productsContainer {
+    @include media-breakpoint-up(xl) {
+      height: 808px;
+    }
+    @include media-breakpoint-up(xxl) {
+      height: 912px;
+      padding-left: 28px;
+    }
+  }
+
+  .titulos-principales {
+    h2 {
+      font-weight: 600;
+    }
+  }
+
+  .products-content {
+    padding-top: 32px;
+
+    @include media-breakpoint-up(xl) {
+      padding-top: 73px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      padding-top: 169px;
+    }
+  }
+
+  .phones-orbem {
+    &--desktop {
+      padding-left: 116px;
+    }
+
+    &--tablet {
+      bottom: -620px;
+
+      @include media-breakpoint-up(lg) {
+        bottom: -650px;
+      }
+
+      left: 50%;
+      transform: translateX(-189.5px);
+    }
+
+    &--mobile {
+      bottom: -500px;
+      left: 50%;
+      transform: translateX(-137.5px);
+    }
+  }
+
+  .orbem-video {
+    top: 14px;
+    left: 130px;
+    border-radius: 20px;
+  }
+
+  .orbem-img-back {
+    left: 239px;
+    bottom: 0px;
+  }
+
+  .nextSectionLinkContainer {
+    margin-top: 43px;
+
+    @include media-breakpoint-up(xxl) {
+      margin-top: 48px;
+    }
+  }
+
+  .btnProducts {
+    min-width: 158px;
+    height: 35px;
+    font-size: 14px;
+
+    @include media-breakpoint-up(md) {
+      min-width: 140px;
+      height: 40px;
+      font-size: 1rem;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      min-width: 150px;
+      height: 56px;
+      font-size: 18px;
+    }
+  }
+}
+
+.clients {
+  overflow-x: hidden;
+  .main-container {
+    background-image: unset;
+
+    @include media-breakpoint-up(xxl) {
+      padding-bottom: 62px;
+    }
+  }
+
+  .carousel-inner {
+    overflow: unset;
+    min-height: 100%;
+  }
+
+  .custom-container {
+    margin: 0 auto 3rem;
+    height: 230px;
+    width: 224px;
+
+    @include media-breakpoint-up(md) {
+      width: 620px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      width: 80%;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      width: 872px;
+    }
+  }
+
+  .carousel-item {
+    opacity: 0;
+    transition: all 0.5s ease-in-out !important;
+
+    & > .row {
+      row-gap: 1rem;
+
+      @include media-breakpoint-up(md) {
+        row-gap: 2.5rem;
+      }
+    }
+  }
+
+  .col > img,
+  .col-auto > img {
+    width: 100px;
+    height: 56px;
+
+    @include media-breakpoint-up(md) {
+      width: 136px;
+      height: 76px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      width: 170px;
+      height: 95px;
+    }
+  }
+
+  .active.carousel-item {
+    opacity: 1;
+  }
+
+  .carousel-indicators {
+    margin: 2rem auto 0;
+    top: 100%;
+    column-gap: 6.38px;
+    bottom: unset;
+    height: 12px;
+    width: 100%;
+    max-width: 100%;
+
+    [data-bs-target] {
+      background-color: $mu-gris;
+    }
+
+    .active {
+      background-color: unset;
+      background-image: $degrade-subsecciones;
+    }
+
+    button {
+      flex: unset;
+      height: 10px;
+      width: 10px;
+      border-radius: 50%;
+    }
+  }
+
+  .customRow {
+    width: 224px;
+    min-height: 128px;
+    row-gap: 1rem;
+    justify-content: space-between;
+
+    @include media-breakpoint-up(md) {
+      width: 706px;
+      row-gap: 1.5rem;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      width: 788px;
+      min-height: 200px;
+    }
+  }
+
+  .btnJoinClientes {
+    min-width: 174px;
+    height: 41px;
+    border-radius: 36.5px;
+    font-size: 14px;
+    margin-top: 80px;
+
+    @include media-breakpoint-up(md) {
+      min-width: 289px;
+      height: 49px;
+      border-radius: 75px;
+      font-size: 1rem;
+      margin-top: 90px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      height: 56px;
+      font-size: 18px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      margin-top: 106px;
+    }
+  }
+}

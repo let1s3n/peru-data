@@ -1,0 +1,19 @@
+.contact-page {
+  .btnContact {
+    width: 124px;
+    height: 48px;
+
+    @include media-breakpoint-up(md) {
+      width: 135px;
+      height: 55px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      width: 200px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      width: 294px;
+    }
+  }
+}
