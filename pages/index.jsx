@@ -6,7 +6,7 @@ const index = () => {
   return (
     <>
       <Head>
-        <title>SMRL Acumulación Los Rosales</title>
+        <title>Peru Data</title>
       </Head>
       <Home />
     </>
