@@ -12,7 +12,7 @@
   "version": "1.0.0",
   "private": true,
   "license": "MIT",
-  "homepage": "YOUR_GIT_REPO_URL",
+  "homepage": "https://github.com/let1s3n/peru-data",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -29,14 +29,14 @@
     "bootstrap": "^5.2.3",
     "next": "^13.1.6",
     "react": "^18.2.0",
-    "react-bootstrap": "^2.7.2",
-    "sass": "^1.58.3"
+    "react-bootstrap": "^2.7.2"
   },
   "devDependencies": {
     "eslint": "^8.34.0",
     "eslint-config-next": "^13.1.6",
     "eslint-plugin-react": "^7.32.2",
     "husky": "^8.0.3",
-    "prettier": "^2.8.4"
+    "prettier": "^2.8.4",
+    "sass": "^1.58.3"
   }
 }
