@@ -13,7 +13,7 @@ const Loader = (props) => {
     >
       <Image
         className="logo-loader"
-        src={`${process.env.NEXT_CDN}images/logo-alr-square.png`}
+        src={`${process.env.NEXT_PUBLIC_CDN}images/logo-alr-square.png`}
         alt="logo loader"
       />
     </div>
