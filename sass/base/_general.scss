@@ -1,0 +1,44 @@
+body.modal-open {
+  position: fixed;
+  overflow-y: scroll !important;
+  width: 100%;
+  padding-right: 0 !important;
+}
+
+h6,
+.h6,
+h5,
+.h5,
+h4,
+.h4,
+h3,
+.h3,
+h2,
+.h2,
+h1,
+.h1,
+p {
+  margin-bottom: 0px;
+}
+
+.fw-500 {
+  font-weight: 500 !important;
+}
+
+.fw-600 {
+  font-weight: 600 !important;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+
+  &:active {
+    outline: none;
+    color: unset;
+  }
+
+  &:visited {
+    color: unset;
+  }
+}

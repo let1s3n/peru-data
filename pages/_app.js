@@ -1,11 +1,13 @@
-import SSRProvider from 'react-bootstrap/SSRProvider';
-
+import { SSRProvider } from 'react-bootstrap';
+import DefaultLayout from '../components/layout/DefaultLayout/DefaultLayout';
 import '../sass/app.scss';
 
 function MyApp({ Component, pageProps }) {
   return (
     <SSRProvider>
-      <Component {...pageProps} />
+      <DefaultLayout>
+        <Component {...pageProps} />
+      </DefaultLayout>
     </SSRProvider>
   );
 }
