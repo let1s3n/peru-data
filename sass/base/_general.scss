@@ -42,3 +42,9 @@ a {
     color: unset;
   }
 }
+
+.main-container {
+  min-height: calc(100vh - 290px);
+  height: fit-content;
+  padding: 32px;
+}

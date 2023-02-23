@@ -1,8 +1,28 @@
-import React from 'react'
+import React, { useState } from 'react';
+import Graph from '../../modules/Graph/Graph';
+const Graficos = ({ data }) => {
 
-const Graficos = () => {
+    const [dataSample, setDataSample] = useState({
+        options: {
+            chart: {
+                id: "basic-bar",
+            },
+            xaxis: {
+                categories: data.periods.map(period => (period.name)),
+            },
+        },
+        series: [
+            {
+                name: "series-1",
+                data: data.periods.map(period => (parseInt(period.values[0]))),
+            },
+        ],
+    });
+
     return (
-        <h1>Graficos</h1>
+
+        <Graph title={data.config.title} data={dataSample} type={"line"} />
+
     )
 }
 
