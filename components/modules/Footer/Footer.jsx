@@ -3,10 +3,9 @@ import React from 'react'
 const Footer = () => {
     return (
         <div className="footer">
-            <p>1</p>
-            <p>2</p>
-            <p>3</p>
-            <p>4</p>
+            {/* <p className="lh-1">© 2023 – PERU DATA. Todos los derechos reservados.</p> */}
+
+            <p className="lh-1">Desarrollado por <a target="_blank"><strong>Hexagon Studio</strong></a></p>
         </div>
     )
 }

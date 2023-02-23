@@ -31,7 +31,7 @@ const Home = ({ data }) => {
   return (
 
     <section className="main-container">
-      <h1 className="title">Hola mundo</h1>
+
       <div className="d-flex my-4 justify-content-center">
         <Chart
           options={dataSample.options}
