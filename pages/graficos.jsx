@@ -30,7 +30,6 @@ export async function getStaticProps() {
 
     const produccionOroData = JSON.parse(produccionOro2.replace("Notice: Undefined offset: 1 in /srv/www/htdocs/estadisticas/application/views/scripts/api/index.phtml on line 1972", ""))
 
-
     console.log("pbiData:", pbiData)
 
     console.log("produccionOroData:", produccionOroData)
