@@ -1,27 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Graph from '../../modules/Graph/Graph';
-const Graficos = ({ data }) => {
+const Graficos = ({ dataset }) => {
 
-    const [dataSample, setDataSample] = useState({
-        options: {
-            chart: {
-                id: "basic-bar",
-            },
-            xaxis: {
-                categories: data.periods.map(period => (period.name)),
-            },
-        },
-        series: [
-            {
-                name: "series-1",
-                data: data.periods.map(period => (parseInt(period.values[0]))),
-            },
-        ],
-    });
 
     return (
+        <>
+            <Graph title={dataset.pbiData.config.title} data={dataset.pbiData} type="line" />
 
-        <Graph title={data.config.title} graphData={dataSample} type={"line"} />
+            <Graph title={dataset.produccionOroData.config.title} data={dataset.produccionOroData} type="bar" />
+
+        </>
 
     )
 }
