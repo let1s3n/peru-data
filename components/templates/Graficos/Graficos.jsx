@@ -21,7 +21,7 @@ const Graficos = ({ data }) => {
 
     return (
 
-        <Graph title={data.config.title} data={dataSample} type={"line"} />
+        <Graph title={data.config.title} graphData={dataSample} type={"line"} />
 
     )
 }
